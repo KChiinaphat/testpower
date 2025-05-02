@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+
+
+<head>
+  <title>PowerEmodular</title>
+</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="slide-show.css">
+
+
+
+<body>
+    <div class="top-hover-zone"></div>
+
+  <header>
+    <nav id="home">
+      <h1>PowerEmodular</h1>
+      <ul>
+        <li><a href="#home" data-th="หน้าแรก" data-en="Home">Home</a></li>
+        <li><a href="#aboutus" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
+        <li><a href="#product" data-th="ผลิตภัณฑ์" data-en="Product">Product</a></li>
+        <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+        <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
+        <li><a href="#csr" data-th="CSR" data-en="CSR">CSR</a></li>
+        <button onclick="setLanguage('th')">ไทย</button>
+        <button onclick="setLanguage('en')">EN</button>
+        <li><i class="bi bi-search"></i><a href="#search" data-th="ค้นหา" data-en="Search">Search</a></li>
+        
+    </ul>
+    
+    </nav>
+  </header>
+
+<main>
+    <div style="height: 100px;"></div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="slide-bg" style="background-image: url('image/Home_slide1-1024x576.jpg');"></div>
+          <img src="image/Home_slide1-1024x576.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="slide-bg" style="background-image: url('image/Home_slide2-1024x576.jpg');"></div>
+          <img src="image/Home_slide2-1024x576.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="slide-bg" style="background-image: url('image/Home_slide3-1024x576.jpg');"></div>
+          <img src="image/Home_slide3-1024x576.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+<!--       
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      </div>
+      
+    <br>
+    <!-- <section id="map">
+      <h2>ที่ตั้งบริษัทของเรา</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5643068607715!2d100.27150867485466!3d13.684236586700608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295918bd6c405%3A0xfdc11e38c47b1226!2z4Lie4Liy4Lin4LmA4Lin4Lit4Lij4LmM4Lit4Li14LmC4Lih4LiU4Li54Lil4Liy4Lij4LmMIOC4iOC4s-C4geC4seC4lA!5e0!3m2!1sth!2sth!4v1746164500201!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section> -->
+    
+</main>
+<script src="script.js"></script> 
+<script src="slide-show.js"></script>
+<script src="language.js"></script>
+</body>
+</html>

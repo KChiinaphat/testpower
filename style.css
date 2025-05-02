@@ -1,0 +1,90 @@
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        height: 2000px; /* เพิ่มความสูงเพื่อให้สามารถเลื่อนขึ้น-ลงได้ */
+        background-color: #f4f4f4;
+      }
+    
+    header {
+        position: fixed;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        background-color: #3C5567;
+        color: white;
+        padding: 30px 40px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: top 0.6s ease;
+        z-index: 1000;
+    }
+    
+
+    .top-hover-zone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        z-index: 999;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header nav h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline;
+    }
+    
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    header nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    /* .map-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        height: 200px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+      }
+      
+      #map h2 {
+        display: none; 
+      }
+      
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      } */
+      
