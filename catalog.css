@@ -365,4 +365,190 @@ footer {
 .logo-grid img:hover {
     transform: scale(1.1);
 }
+/* Enhanced Catalog Styling */
+.catalog-container {
+    padding-top: 120px;
+    background-color: var(--light-color);
+  }
+  
+  .catalog-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+  }
+  
+  .catalog-header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    animation: pulse 15s infinite linear;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  .catalog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  .catalog-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+  }
+  
+  /* Logo Grid */
+  .catalog-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 20px 0 60px;
+  }
+  
+  .logo-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
+  }
+  
+  .logo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo-card:hover::after {
+    width: 100%;
+  }
+  
+  .logo-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.4s ease;
+  }
+  
+  .logo-card img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+  }
+  
+  .logo-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .catalog-button {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .logo-card:hover .catalog-button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .catalog-button:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(255, 154, 60, 0.3);
+  }
+  
+  .catalog-button i {
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .catalog-header {
+      padding: 2rem 1rem;
+      margin-bottom: 30px;
+    }
+    
+    .catalog-title {
+      font-size: 2rem;
+    }
+    
+    .logo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    
+    .catalog-button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .catalog-title {
+      font-size: 1.8rem;
+    }
+    
+    .catalog-description {
+      font-size: 1rem;
+    }
+    
+    .logo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+    
+    .logo-card {
+      padding: 1.5rem;
+    }
+  }
   

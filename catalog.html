@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
+    <title>Catalog - PowerEmodular</title>
     <link rel="stylesheet" href="catalog.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        
-        
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="top-hover-zone"></div>
 
     <header id="header">
         <nav>
             <div class="logo">
-                <img src="image/powere_logo.png" alt="">
+                <img src="image/powere_logo.png" alt="PowerEmodular Logo">
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
@@ -39,33 +36,58 @@
             </ul>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <main>
-        <section class="catalog-header" data-aos="fade-up">
-            <span data-th="นี่คือ catalog ของสินค้าที่เราใช้ประกอบตู้ไฟฟ้าต่างๆ คลิกที่รูปเพื่อดู Catalog" data-en="This is a catalog of products that we use to assemble various electrical cabinets. Click on the image to view the catalog.">แคตตาล็อก Catalog</span>
-        </section>
+    <main class="catalog-container">
+        <div class="catalog-header" data-aos="fade-up">
+            <h1 class="catalog-title" data-th="แคตตาล็อกผลิตภัณฑ์" data-en="Product Catalogs">Product Catalogs</h1>
+            <p class="catalog-description" data-th="นี่คือแคตตาล็อกของสินค้าที่เราใช้ประกอบตู้ไฟฟ้าต่างๆ คลิกที่รูปเพื่อดูรายละเอียดเพิ่มเติม" data-en="This is a catalog of products that we use to assemble various electrical cabinets. Click on a card to view the detailed catalog.">
+                This is a catalog of products that we use to assemble various electrical cabinets. Click on a card to view the detailed catalog.
+            </p>
+        </div>
 
-        <section class="logo-grid" data-aos="fade-up">
-            <a href="schneider_manual.pdf" target="_blank">
-                <img src="logo/schneider.png" alt="Schneider Electric Logo">
-            </a>
-            <a href="abb_manual.pdf" target="_blank">
-                <img src="logo/abblogo.png" alt="ABB Logo">
-            </a>
-            <a href="vitzro_manual.pdf" target="_blank">
-                <img src="logo/vitzro.png" alt="Vitzro EM Logo">
-            </a>
-            <a href="tele_manual.pdf" target="_blank">
-                <img src="logo/tele.png" alt="Tele Logo">
-            </a>
-            <a href="iskra_manual.pdf" target="_blank">
-                <img src="logo/iskra.png" alt="Iskra Logo">
-            </a>
-        </section>
+        <div class="catalog-content">
+            <div class="logo-grid">
+                <a href="schneider_manual.pdf" target="_blank" class="logo-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="logo/schneider.png" alt="Schneider Electric Logo">
+                    <button class="catalog-button">
+                        <i class="bi bi-file-pdf"></i>
+                        <span data-th="ดูแคตตาล็อก" data-en="View Catalog">View Catalog</span>
+                    </button>
+                </a>
+                
+                <a href="abb_manual.pdf" target="_blank" class="logo-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="logo/abblogo.png" alt="ABB Logo">
+                    <button class="catalog-button">
+                        <i class="bi bi-file-pdf"></i>
+                        <span data-th="ดูแคตตาล็อก" data-en="View Catalog">View Catalog</span>
+                    </button>
+                </a>
+                
+                <a href="vitzro_manual.pdf" target="_blank" class="logo-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="logo/vitzro.png" alt="Vitzro EM Logo">
+                    <button class="catalog-button">
+                        <i class="bi bi-file-pdf"></i>
+                        <span data-th="ดูแคตตาล็อก" data-en="View Catalog">View Catalog</span>
+                    </button>
+                </a>
+                
+                <a href="tele_manual.pdf" target="_blank" class="logo-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="logo/tele.png" alt="Tele Logo">
+                    <button class="catalog-button">
+                        <i class="bi bi-file-pdf"></i>
+                        <span data-th="ดูแคตตาล็อก" data-en="View Catalog">View Catalog</span>
+                    </button>
+                </a>
+                
+                <a href="iskra_manual.pdf" target="_blank" class="logo-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="logo/iskra.png" alt="Iskra Logo">
+                    <button class="catalog-button">
+                        <i class="bi bi-file-pdf"></i>
+                        <span data-th="ดูแคตตาล็อก" data-en="View Catalog">View Catalog</span>
+                    </button>
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -107,10 +129,20 @@
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
-            setLanguage('th'); // Set default language to Thai
+            // Check for saved language preference
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                setLanguage(savedLang);
+            } else {
+                setLanguage('en'); // Default language
+            }
         });
     </script>
 </body>
