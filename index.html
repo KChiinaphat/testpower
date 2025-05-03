@@ -1,74 +1,195 @@
 <!DOCTYPE html>
 <html lang="th">
 
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PowerEmodular</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+
+    
+  </style>
 </head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css"> 
-<link rel="stylesheet" href="slide-show.css">
-
-
 
 <body>
-    <div class="top-hover-zone"></div>
+  <div class="top-hover-zone"></div>
 
-  <header>
-    <nav id="home">
-      <h1>PowerEmodular</h1>
-      <ul>
-        <li><a href="#home" data-th="หน้าแรก" data-en="Home">Home</a></li>
-        <li><a href="#aboutus" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
+  <header id="header">
+    <nav>
+      <div class="logo">
+        <img src="image/powere_logo.png" alt="">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
+        <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
         <li><a href="#product" data-th="ผลิตภัณฑ์" data-en="Product">Product</a></li>
         <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
         <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
         <li><a href="#csr" data-th="CSR" data-en="CSR">CSR</a></li>
-        <button onclick="setLanguage('th')">ไทย</button>
-        <button onclick="setLanguage('en')">EN</button>
-        <li><i class="bi bi-search"></i><a href="#search" data-th="ค้นหา" data-en="Search">Search</a></li>
-        
-    </ul>
-    
+        <div class="lang-buttons">
+          <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+          <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+        </div>
+        <li class="search-icon">
+          <i class="bi bi-search"></i>
+          <a href="#search" data-th="ค้นหา" data-en="Search">Search</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-<main>
-    <div style="height: 100px;"></div>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
+  <main>
+   
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="slideshow-container">
+        <div class="mySlides active">
           <div class="slide-bg" style="background-image: url('image/Home_slide1-1024x576.jpg');"></div>
-          <img src="image/Home_slide1-1024x576.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+          <img class="slide-img" src="image/Home_slide1-1024x576.jpg" alt="PowerEmodular Products">
         </div>
       
-        <div class="mySlides fade">
+        <div class="mySlides">
           <div class="slide-bg" style="background-image: url('image/Home_slide2-1024x576.jpg');"></div>
-          <img src="image/Home_slide2-1024x576.jpg" style="width:100%">
-          <div class="text">Caption Two</div>
+          <img class="slide-img" src="image/Home_slide2-1024x576.jpg" alt="PowerEmodular Solutions">
         </div>
       
-        <div class="mySlides fade">
+        <div class="mySlides">
           <div class="slide-bg" style="background-image: url('image/Home_slide3-1024x576.jpg');"></div>
-          <img src="image/Home_slide3-1024x576.jpg" style="width:100%">
-          <div class="text">Caption Three</div>
+          <img class="slide-img" src="image/Home_slide3-1024x576.jpg" alt="PowerEmodular Technology">
         </div>
-<!--       
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        
+        <div class="slide-indicators">
+          <div class="slide-indicator active" onclick="currentSlide(1)"></div>
+          <div class="slide-indicator" onclick="currentSlide(2)"></div>
+          <div class="slide-indicator" onclick="currentSlide(3)"></div>
+        </div>
+        
+        <div class="slide-arrow prev" onclick="plusSlides(-1)">
+          <i class="bi bi-chevron-left"></i>
+        </div>
+        <div class="slide-arrow next" onclick="plusSlides(1)">
+          <i class="bi bi-chevron-right"></i>
+        </div>
       </div>
       
-    <br>
-    <!-- <section id="map">
-      <h2>ที่ตั้งบริษัทของเรา</h2>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5643068607715!2d100.27150867485466!3d13.684236586700608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295918bd6c405%3A0xfdc11e38c47b1226!2z4Lie4Liy4Lin4LmA4Lin4Lit4Lij4LmM4Lit4Li14LmC4Lih4LiU4Li54Lil4Liy4Lij4LmMIOC4iOC4s-C4geC4seC4lA!5e0!3m2!1sth!2sth!4v1746164500201!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="hero-content">
+        <h1 class="hero-title" data-th="ตู้ควบคุมไฟฟ้า" data-en="Electrical control cabinet">Electrical control cabinet</h1>
+        <p class="hero-subtitle" data-th="รับออกเเบบเเละผลิตตู้ควบคุมไฟฟ้า" data-en="We accept design and production of electrical control cabinets.">We accept design and production of electrical control cabinets.</p>
+        <button class="hero-btn" data-th="ค้นพบผลิตภัณฑ์ของเรา" data-en="Discover Our Products">Discover Our Products</button>
       </div>
-    </section> -->
+    </section>
     
-</main>
-<script src="script.js"></script> 
-<script src="slide-show.js"></script>
-<script src="language.js"></script>
+   
+    <section id="aboutus" class="about-section">
+      <div class="about-content">
+        <h2 data-th="เกี่ยวกับเรา" data-en="About Us">About Us</h2>
+        <p data-th="บริษัทพาวเวอร์อีโมดูลาร์ จำกัด เป็นผู้นำในการพัฒนาและผลิตตู้เเผงควบคุมวงจรไฟฟ้าในประเทศไทย" data-en="PowerEmodular Co., Ltd. is a leading developer and manufacturer of sustainable power solutions in Thailand">PowerEmodular Co., Ltd. is a leading developer and manufacturer of sustainable power solutions in Thailand. With years of experience in the industry, we have established ourselves as a trusted provider of high-quality modular power systems that meet the diverse needs of our clients.</p>
+        <p data-th="เรามุ่งมั่นที่จะมอบผลิตภัณฑ์ที่มีคุณภาพสูงและบริการที่เป็นเลิศแก่ลูกค้าของเรา" data-en="We are committed to delivering high-quality products and exceptional service to our customers">We are committed to delivering high-quality products and exceptional service to our customers. Our team of skilled engineers and professionals works tirelessly to design and implement innovative solutions that address the evolving needs of the power industry.</p>
+        <a href="aboutUs.html" class="product-btn" data-th="อ่านเพิ่มเติม" data-en="Read More">Read More</a>
+      </div>
+      <div class="about-image">
+        <img src="/api/placeholder/600/400" alt="About PowerEmodular">
+      </div>
+    </section>
+    <section id="aboutus" class="about-section">
+        <div class="about-content">
+          <h2 data-th="พาวเวอร์ อี โมดูลาร์ พวกเราทำอะไร" data-en="Power E Modular What we do?">Power E Modular What we do?</h2>
+          <p data-th="บริษัท พาวเวอร์ อี โมดูลาร์ จำกัด" data-en="PowerEmodular Co., Ltd.">PowerEmodular Co., Ltd.</p>
+          <p data-th="รับออกแบบและผลิตตู้ไฟฟ้า ตู้สวิทช์บอร์ด และตู้คอนโทรล สำหรับงานโครงการอาคารสูง รวมถึงโรงงานอุตสาหกรรม ด้วยทีมงานผู้เชี่ยวชาญและวัสดุจากแบรนด์ชั้นนำ เช่น ABB, Schneider และ Mitsubishi" data-en="We design and manufacture electrical cabinets, switchboard cabinets, and control cabinets for high-rise building projects, including industrial plants, with a team of experts and materials from leading brands such as ABB, Schneider, and Mitsubishi.">We design and manufacture electrical cabinets, switchboard cabinets, and control cabinets for high-rise building projects, including industrial plants, with a team of experts and materials from leading brands such as ABB, Schneider, and Mitsubishi.</p>
+          
+        </div>
+       
+      </section>
+    
+    <section id="product" class="product-section">
+      <div class="section-header">
+        <h2 data-th="ผลิตภัณฑ์ของเรา" data-en="Our Products">Our Products</h2>
+        <p data-th="ค้นพบผลิตภัณฑ์คุณภาพสูงที่ออกแบบมาเพื่อตอบสนองความต้องการด้านพลังงานของคุณ" data-en="Discover our high-quality products designed to meet your power needs">Discover our high-quality products designed to meet your power needs</p>
+      </div>
+      
+      <div class="product-cards">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Modular Power Systems">
+          </div>
+          <div class="product-info">
+            <h3 data-th="ระบบพลังงานโมดูลาร์" data-en="Modular Power Systems">Modular Power Systems</h3>
+            <p data-th="ระบบพลังงานแบบปรับขนาดได้และครบวงจรสำหรับการใช้งานในอุตสาหกรรมและการพาณิชย์" data-en="Scalable and comprehensive power systems for industrial and commercial applications">Scalable and comprehensive power systems for industrial and commercial applications</p>
+            <a href="#" class="product-btn" data-th="ดูรายละเอียด" data-en="View Details">View Details</a>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Energy Storage Solutions">
+          </div>
+          <div class="product-info">
+            <h3 data-th="โซลูชันการจัดเก็บพลังงาน" data-en="Energy Storage Solutions">Energy Storage Solutions</h3>
+            <p data-th="โซลูชันการจัดเก็บพลังงานที่มีประสิทธิภาพสูงสำหรับการใช้งานแบบออนกริดและออฟกริด" data-en="High-efficiency energy storage solutions for on-grid and off-grid applications">High-efficiency energy storage solutions for on-grid and off-grid applications</p>
+            <a href="#" class="product-btn" data-th="ดูรายละเอียด" data-en="View Details">View Details</a>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Solar Power Integration">
+          </div>
+          <div class="product-info">
+            <h3 data-th="การบูรณาการพลังงานแสงอาทิตย์" data-en="Solar Power Integration">Solar Power Integration</h3>
+            <p data-th="โซลูชันพลังงานแสงอาทิตย์แบบครบวงจรที่ผสานรวมกับระบบพลังงานที่มีอยู่" data-en="Comprehensive solar power solutions that integrate with existing power systems">Comprehensive solar power solutions that integrate with existing power systems</p>
+            <a href="#" class="product-btn" data-th="ดูรายละเอียด" data-en="View Details">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>PowerEmodular</h2>
+        <p class="footer-description" data-th="เราเป็นผู้นำในการผลิตโซลูชันพลังงานที่ยั่งยืนในประเทศไทย มุ่งมั่นที่จะสร้างอนาคตที่ดีกว่าด้วยเทคโนโลยีที่เป็นมิตรกับสิ่งแวดล้อม" data-en="We are a leading provider of sustainable power solutions in Thailand, committed to creating a better future with environmentally friendly technology">We are a leading provider of sustainable power solutions in Thailand, committed to creating a better future with environmentally friendly technology.</p>
+        <div class="footer-social">
+          <a href="https://web.facebook.com/p/POWER-E-MODULARCOLTD-100051458839623/?_rdc=1&_rdr#" class="social-icon" target="_blank"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+
+       <div class="footer-links">
+        <h3 data-th="ลิงก์ด่วน" data-en="Quick Links">Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
+          <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
+          <li><a href="#product" data-th="ผลิตภัณฑ์" data-en="Products">Products</a></li>
+          <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+          <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3 data-th="ติดต่อเรา" data-en="Contact Us">Contact Us</h3>
+        <p><i class="bi bi-telephone"></i> <span data-th="โทรศัพท์:  081-987-9729" data-en="Phone:  081-987-9729">Phone: 081-987-9729</span></p>
+        <p><i class="bi bi-envelope"></i> <span data-th="อีเมล: power.modular@gmail.com" data-en="Email: power.modular@gmail.com">Email:power.modular@gmail.com</span></p>
+        <p><i class="bi bi-clock"></i> <span data-th="เวลาทำการ: จันทร์ - เสาร์, 8:00 - 17:00" data-en="Business Hours: Mon - Fri, 8:00 AM - 5:00 PM">Business Hours: Mon - Fri, 8:00 AM - 5:00 PM</span></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p data-th="© 2025 PowerEmodular. สงวนลิขสิทธิ์ทั้งหมด" data-en="© 2025 PowerEmodular. All Rights Reserved">© 2025 PowerEmodular. All Rights Reserved</p>
+    </div>
+  </footer>
+  
+  <!-- Map -->
+  <div class="map-container">
+    <div class="map-title" data-th="ที่ตั้งบริษัทของเรา" data-en="Our Location">Our Location</div>
+    <div class="map-close"><i class="bi bi-x"></i></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5643068607715!2d100.27150867485466!3d13.684236586700608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295918bd6c405%3A0xfdc11e38c47b1226!2z4Lie4Liy4Lin4LmA4Lin4Lit4Lij4LmM4Lit4Li14LmC4Lih4LiU4Li54Lil4Liy4Lij4LmMIOC4iOC4s-C4geC4seC4lA!5e0!3m2!1sth!2sth!4v1746164500201!5m2!1sth!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <script src="script.js"></script>
+  <script>
+
+   
+  </script>
 </body>
 </html>
