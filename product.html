@@ -24,7 +24,7 @@
                 <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
                 <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
                 <li><a href="product.html" data-th="ผลิตภัณฑ์" data-en="Product">Product</a></li>
-                <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+                <li><a href="catalog.html" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
                 <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
                 <li><a href="#csr" data-th="CSR" data-en="CSR">CSR</a></li>
                 <div class="lang-buttons">
@@ -108,8 +108,8 @@
                 <ul>
                     <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
                     <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
-                    <li><a href="#product" data-th="ผลิตภัณฑ์" data-en="Products">Products</a></li>
-                    <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+                    <li><a href="product.html" data-th="ผลิตภัณฑ์" data-en="Products">Products</a></li>
+                    <li><a href="catalog.html" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
                     <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
                 </ul>
             </div>
@@ -156,6 +156,11 @@
 
         // Set initial display to "Panel" category
         document.querySelector('.category-btn[data-category="panel"]').click();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setLanguage('th'); // Set default language to Thai
+        });
     </script>
 </body>
 </html>
