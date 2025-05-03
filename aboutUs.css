@@ -369,7 +369,9 @@ main {
 /* Article Section */
 .article-section {
   padding: 60px 20px;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -822,3 +824,62 @@ footer {
 
 /* Additional Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
+    
+    nav ul {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--primary-color);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 5rem;
+      transition: right 0.5s;
+      z-index: 1001;
+    }
+    
+    nav ul.active {
+      right: 0;
+    }
+    
+    .hero-section {
+      height: 60vh;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .slide-arrow {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .product-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+      width: 250px;
+      height: 150px;
+    }
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger{
+    display: none;
+  }
