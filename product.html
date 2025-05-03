@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="top-hover-zone"></div>
+
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="image/powere_logo.png" alt="">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
+                <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
+                <li><a href="product.html" data-th="ผลิตภัณฑ์" data-en="Product">Product</a></li>
+                <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+                <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
+                <li><a href="#csr" data-th="CSR" data-en="CSR">CSR</a></li>
+                <div class="lang-buttons">
+                    <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                </div>
+                <li class="search-icon">
+                    <i class="bi bi-search"></i>
+                    <a href="#search" data-th="ค้นหา" data-en="Search">Search</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="product-hero" data-aos="fade-up">
+            <h1 data-th="ผลิตภัณฑ์ของเรา" data-en="Our Products">Our Products</h1>
+            <p data-th="นี่คือผลิตภัณฑ์ยอดนิยมและตู้ควบคุมรูปแบบต่างๆ ที่เราผลิตให้กับองค์กรหลากหลาย ด้วยเจตนาและความมุ่งมั่นในการสร้างผลิตภัณฑ์คุณภาพสูงเพื่อตอบสนองความต้องการที่หลากหลายของลูกค้า" data-en="This is a popular product and cabinet form that we produce for various organizations with the intention and commitment to create high quality products to the various needs of customers">
+                This is a popular product and cabinet form that we produce for various organizations with the intention and commitment to create high quality products to the various needs of customers
+            </p>
+        </section>
+
+        <section class="category-filter" data-aos="fade-up">
+            <button class="category-btn active" data-category="panel" data-th="แผงควบคุม" data-en="Panel">Panel</button>
+            <button class="category-btn" data-category="popular" data-th="ผลิตภัณฑ์ยอดนิยม" data-en="Popular Product">Popular Product</button>
+        </section>
+
+        <section class="product-grid" data-aos="fade-up">
+            <div class="product-card panel active">
+                <img src="https://via.placeholder.com/300x200" alt="Control Cabinet 1">
+                <div class="product-card-content">
+                    <h3 data-th="ตู้ควบคุมไฟฟ้าแบบมาตรฐาน" data-en="Standard Electrical Control Cabinet">Standard Electrical Control Cabinet</h3>
+                    <p data-th="ตู้ควบคุมไฟฟ้าที่ออกแบบตามมาตรฐานสากล เหมาะสำหรับการใช้งานอุตสาหกรรม" data-en="A control cabinet designed to international standards, ideal for industrial use">
+                        A control cabinet designed to international standards, ideal for industrial use
+                    </p>
+                    <a href="#" data-th="เรียนรู้เพิ่มเติม" data-en="Learn More">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card panel active">
+                <img src="https://via.placeholder.com/300x200" alt="Control Cabinet 2">
+                <div class="product-card-content">
+                    <h3 data-th="ตู้ควบคุมไฟฟ้าพลังงานแสงอาทิตย์" data-en="Solar Power Control Cabinet">Solar Power Control Cabinet</h3>
+                    <p data-th="โซลูชันพลังงานหมุนเวียนที่ทนทานและมีประสิทธิภาพสูง" data-en="A durable and highly efficient renewable energy solution">
+                        A durable and highly efficient renewable energy solution
+                    </p>
+                    <a href="#" data-th="เรียนรู้เพิ่มเติม" data-en="Learn More">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card popular">
+                <img src="https://via.placeholder.com/300x200" alt="Control Cabinet 3">
+                <div class="product-card-content">
+                    <h3 data-th="ตู้ควบคุมอัตโนมัติ" data-en="Automated Control Cabinet">Automated Control Cabinet</h3>
+                    <p data-th="ระบบอัตโนมัติที่เพิ่มประสิทธิภาพการทำงานในโรงงาน" data-en="An automated system to enhance factory performance">
+                        An automated system to enhance factory performance
+                    </p>
+                    <a href="#" data-th="เรียนรู้เพิ่มเติม" data-en="Learn More">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>PowerEmodular</h2>
+                <p class="footer-description" data-th="เราเป็นผู้นำในการผลิตโซลูชันพลังงานที่ยั่งยืนในประเทศไทย มุ่งมั่นที่จะสร้างอนาคตที่ดีกว่าด้วยเทคโนโลยีที่เป็นมิตรกับสิ่งแวดล้อม" data-en="We are a leading provider of sustainable power solutions in Thailand, committed to creating a better future with environmentally friendly technology">
+                    We are a leading provider of sustainable power solutions in Thailand, committed to creating a better future with environmentally friendly technology.
+                </p>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/p/POWER-E-MODULARCOLTD-100051458839623/?_rdc=1&_rdr#" class="social-icon" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 data-th="ลิงก์ด่วน" data-en="Quick Links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-th="หน้าแรก" data-en="Home">Home</a></li>
+                    <li><a href="aboutUs.html" data-th="เกี่ยวกับเรา" data-en="About Us">About Us</a></li>
+                    <li><a href="#product" data-th="ผลิตภัณฑ์" data-en="Products">Products</a></li>
+                    <li><a href="#catalog" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
+                    <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 data-th="ติดต่อเรา" data-en="Contact Us">Contact Us</h3>
+                <p><i class="bi bi-telephone"></i> <span data-th="โทรศัพท์:  081-987-9729" data-en="Phone:  081-987-9729">Phone: 081-987-9729</span></p>
+                <p><i class="bi bi-envelope"></i> <span data-th="อีเมล: power.modular@gmail.com" data-en="Email: power.modular@gmail.com">Email: power.modular@gmail.com</span></p>
+                <p><i class="bi bi-clock"></i> <span data-th="เวลาทำการ: จันทร์ - เสาร์, 8:00 - 17:00" data-en="Business Hours: Mon - Fri, 8:00 AM - 5:00 PM">Business Hours: Mon - Fri, 8:00 AM - 5:00 PM</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-th="© 2025 PowerEmodular. สงวนลิขสิทธิ์ทั้งหมด" data-en="© 2025 PowerEmodular. All Rights Reserved">© 2025 PowerEmodular. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Category filter functionality
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Get the selected category
+                const category = button.getAttribute('data-category');
+
+                // Show/hide products based on category
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (card.classList.contains(category)) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Set initial display to "Panel" category
+        document.querySelector('.category-btn[data-category="panel"]').click();
+    </script>
+</body>
+</html>
