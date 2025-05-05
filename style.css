@@ -63,7 +63,11 @@ body {
     max-width: 1400px;
     margin: 0 auto;
   }
-  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+ 
   .logo img {
     max-width: 120px;
     width: 100%;
@@ -158,6 +162,7 @@ body {
   .search-icon:hover {
     color: var(--accent-color);
   }
+
   
   /* Main Content */
   main {
@@ -649,11 +654,11 @@ body {
   /* Responsive */
   @media (max-width: 992px) {
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
     }
     
     .hero-subtitle {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
     
     .about-section {
@@ -666,10 +671,24 @@ body {
   }
   
   @media (max-width: 768px) {
-    .mobile-menu-btn {
-      display: block;
+    .hero-title {
+      font-size: 2rem; /* ปรับขนาดฟอนต์บนมือถือ */
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem; /* ปรับขนาดฟอนต์บนมือถือ */
     }
     
+    /* ปรับการจัดคอลัมน์ใน about-section */
+    .about-section {
+      grid-template-columns: 1fr; /* ใช้คอลัมน์เดียวบนมือถือ */
+    }
+    
+    .about-image {
+      order: -1; /* เพื่อให้รูปภาพแสดงด้านบน */
+    }
+  
+    /* เมนูบนมือถือ */
     nav ul {
       position: fixed;
       top: 0;
@@ -683,16 +702,27 @@ body {
       transition: right 0.5s;
       z-index: 1001;
     }
-    
+    .hamburger {
+      display: block; /* ปรับให้แสดงปุ่มเมนูบนมือถือ */
+    }    
     nav ul.active {
       right: 0;
     }
-    
-    .hero-section {
-      height: 60vh;
-    }
-  }
   
+    
+
+    
+    .product-cards {
+      grid-template-columns: 1fr; /* ใช้ 1 คอลัมน์บนมือถือ */
+    }
+    
+    .map-container {
+      width: 250px;
+      height: 150px;
+    }
+
+  }  
+
   @media (max-width: 576px) {
     .hero-title {
       font-size: 2rem;
@@ -715,12 +745,4 @@ body {
       width: 250px;
       height: 150px;
     }
-  }
-
-  .hamburger {
-    display: block;
-  }
-  .hamburger{
-    display: none;
-    
   }

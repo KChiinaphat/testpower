@@ -66,6 +66,10 @@
     max-width: 1400px;
     margin: 0 auto;
   }
+  .hamburger {
+    display: none; /* Hide hamburger menu by default */
+    cursor: pointer;
+  }
   
   .logo img {
     max-width: 130px;
@@ -96,7 +100,7 @@
   nav ul {
     list-style: none;
     display: flex;
-    gap: 1.8rem;
+    gap: 1.5rem;
     align-items: center;
   }
   
@@ -108,7 +112,6 @@
     position: relative;
     padding: 0.4rem 0;
     transition: color 0.3s;
-    letter-spacing: 0.5px;
   }
   
   nav ul li a:hover {
@@ -120,7 +123,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     background-color: var(--accent-color);
     transition: width 0.3s ease;
@@ -513,6 +516,26 @@ footer {
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5rem;
+        transition: right 0.5s;
+        z-index: 1001;
+      }
+      .hamburger {
+        display: block; /* ปรับให้แสดงปุ่มเมนูบนมือถือ */
+      }    
+
+      nav ul.active {
+        right: 0; /* แสดงเมนูเมื่อมีการคลิก */
+      }
     .catalog-header {
       padding: 2rem 1rem;
       margin-bottom: 30px;

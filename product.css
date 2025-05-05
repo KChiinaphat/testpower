@@ -62,9 +62,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.8rem 5%;
   max-width: 1400px;
   margin: 0 auto;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
 .logo img {
@@ -96,7 +100,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.8rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -108,7 +112,6 @@ nav ul li a {
   position: relative;
   padding: 0.4rem 0;
   transition: color 0.3s;
-  letter-spacing: 0.5px;
 }
 
 nav ul li a:hover {
@@ -120,7 +123,7 @@ nav ul li a::after {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   background-color: var(--accent-color);
   transition: width 0.3s ease;
@@ -528,48 +531,114 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .product-hero {
-    padding: 110px 15px 60px;
+  .hamburger {
+      display: block;
   }
-  
-  .product-hero h1 {
-    font-size: 2.2em;
-  }
-  
-  .category-filter button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 0.95em;
-  }
-  
-  .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 15px 60px;
-  }
-  
-  .product-card h3 {
-    font-size: 1.3em;
-  }
-}
 
-@media (max-width: 576px) {
-  .product-hero h1 {
-    font-size: 2em;
+  nav {
+      flex-direction: row;
+      padding: 1rem;
+      position: relative;
   }
-  
-  .product-hero p {
-    font-size: 1em;
+
+  nav ul {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--primary-color);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 5rem;
+      transition: right 0.5s;
+      z-index: 1001;
   }
-  
-  .product-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+
+  nav ul.active {
+      right: 0;
   }
-  
-  .category-filter {
-    padding: 30px 15px;
-    margin: -30px auto 30px;
+
+
+  .lang-buttons {
+      flex-direction: column;
+      gap: 5px;
+      margin: 10px 0;
+  }
+
+  .aboutus-section {
+      height: 50vh;
+      margin-top: 80px;
+  }
+
+  .aboutus-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .aboutus-content img {
+      width: 180px;
+  }
+
+  .quote-section {
+      padding: 60px 15px;
+  }
+
+  .quote-section .quote {
+      font-size: 1.4em;
+      padding: 0 20px;
+  }
+
+  .picture-founder img {
+      width: 150px;
+      height: 150px;
+  }
+
+  .materials-section h2 {
+      font-size: 2.2em;
+  }
+
+  .materials-section .logos {
+      gap: 20px;
+  }
+
+  .materials-section .logos img {
+      height: 45px;
+  }
+
+  .article-section {
+      flex-direction: column;
+      padding: 30px 10px;
+  }
+
+  .article-section > div:last-child {
+      margin-top: 30px;
+  }
+
+  .article-section h2 {
+      font-size: 1.8em;
+  }
+
+  .article-section p {
+      font-size: 1em;
+  }
+
+  .hero-section {
+      height: 60vh;
+      min-height: 400px;
+  }
+
+  .slide-img {
+      object-fit: cover;
+  }
+
+  .slide-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+
+  .slide-indicator {
+      width: 12px;
+      height: 12px;
   }
 }

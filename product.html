@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="product.css">
+  <link rel="icon" type="image/png" href="image/powere_logo.png">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
@@ -13,6 +15,8 @@
     </style>
 </head>
 <body>
+  <div id="header"></div>
+
     <div class="top-hover-zone"></div>
 
     <header id="header">
@@ -26,7 +30,7 @@
                 <li><a href="product.html" data-th="ผลิตภัณฑ์" data-en="Product">Product</a></li>
                 <li><a href="catalog.html" data-th="แคตตาล็อก" data-en="Catalog">Catalog</a></li>
                 <li><a href="#projectreference" data-th="โครงการอ้างอิง" data-en="Project Reference">Project Reference</a></li>
-                <li><a href="#csr" data-th="CSR" data-en="CSR">CSR</a></li>
+                <li><a href="crs.html" data-th="CSR" data-en="CSR">CSR</a></li>
                 <div class="lang-buttons">
                     <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
                     <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -36,6 +40,10 @@
                     <a href="#search" data-th="ค้นหา" data-en="Search">Search</a>
                 </li>
             </ul>
+            <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" onclick="toggleNav()">
+        <i class="bi bi-list"></i>
+      </div>
         </nav>
     </header>
 
@@ -127,10 +135,10 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
 
         // Category filter functionality
         document.querySelectorAll('.category-btn').forEach(button => {
